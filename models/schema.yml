@@ -18,6 +18,18 @@ sources:
             description: purchase data of the parcel
             tests:
               - not_null
+      - name: parcel_product
+        identifier: raw_cc_parcel_product
+        description: each product in a parcel
+        columns:
+          - name: Parcel_id
+            description: id of the parcel
+            tests:
+              - unique:
+                  arguments: 
+                    column_name: "parcel_id || '-' || model_mame"
+              - not_null
+              
               
               
   #- name: iyzico
