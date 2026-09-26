@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: cc_parcel
+    description: new columns addded to parcel data
+  - name: cc_parcel_product
+    description: product details added to cc_parcel
