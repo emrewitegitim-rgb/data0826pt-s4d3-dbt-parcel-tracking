@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: cc
+    schema: DATA0826PT_Circle_Raw
+    description: cc data from source platform
+    tables:
+      - name: parcel
+        identifier: raw_cc_parcel
+        description: pardcel data for each order
+        columns:
+          - name: Parcel_id
+            description: unique id of the parcel.
+            tests:
+              - unique
+              - not_null
+          - name: date_purchase
+            description: purchase data of the parcel
+            tests:
+              - not_null
+              
+              
+  #- name: iyzico
+  #- name: pipedrive
+  #- name: typeform
